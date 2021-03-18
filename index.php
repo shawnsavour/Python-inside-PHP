@@ -1,21 +1,14 @@
+<!DOCTYPE html>
+<html>
 <head>
+<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
 </head>
 <body>
-<form name="form" onclick="hello()" action="index.php" method="get">
-  <input type="text" name="Myname" id="Myname" value="SonDepTrai">
-  <input type="submit" value="Submit">
+<p>Upload image to black it!</p>
+<form action="uploads.php" method="post" enctype="multipart/form-data">
+  Select image to upload:
+  <input type="file" name="fileToUpload" id="fileToUpload">
+  <input type="submit" value="Upload Image" name="submit">
 </form>
-
-<p> This is output </p>
-<p style="font-size:20px;">
-<?php
-    
-    // function hello(){
-        $clgt = $_GET['Myname'];
-        $command = escapeshellcmd('python process.py ' . $clgt);
-        $output = shell_exec($command);
-        echo $output;
-    // }
-    
-?>
-</p>
+</body>
+</html>
