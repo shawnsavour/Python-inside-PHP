@@ -1,7 +1,7 @@
 <head>
 </head>
 <body>
-<form name="form" onclick="hello()" action="index.php" method="get" onclic>
+<form name="form" onclick="hello()" action="index.php" method="get">
   <input type="text" name="Myname" id="Myname" value="SonDepTrai">
   <input type="submit" value="Submit">
 </form>
